@@ -118,6 +118,18 @@ with st.sidebar:
     st.markdown("<span style='color:#8888aa;font-size:0.8rem'>Employee Retention Intelligence</span>",
                 unsafe_allow_html=True)
     st.divider()
+    st.markdown("""
+<div style='font-size:0.78rem;color:#8888aa;line-height:1.7'>
+  Analyzes attrition patterns across <b style='color:#c0c0d8'>1,470 employees</b>
+  to identify flight risk, quantify financial impact, and model the ROI of
+  retention programs.<br><br>
+  Use the <b style='color:#c0c0d8'>Dashboard</b> for an executive overview,
+  the <b style='color:#c0c0d8'>Risk Calculator</b> to score any employee profile,
+  or the <b style='color:#c0c0d8'>ROI Modeler</b> to build a business case for
+  retention investment.
+</div>
+""", unsafe_allow_html=True)
+    st.divider()
 
     page = st.radio(
         "Navigate",
@@ -128,7 +140,6 @@ with st.sidebar:
     st.divider()
     st.markdown("<span style='color:#8888aa;font-size:0.75rem'>Dataset: IBM HR Analytics<br/>1,470 employees · 35 features</span>",
                 unsafe_allow_html=True)
-
 # ── ROUTE ─────────────────────────────────────────────────────────────────────
 if page == "📊 Executive Dashboard":
     from pages_src.dashboard import show
